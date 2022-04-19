@@ -1,221 +1,265 @@
-﻿@*@{
-    ViewBag.Title = "About";
-}
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+﻿<!DOCTYPE html>
+<html lang="en">
 
-<p>Use this area to provide additional information.</p>*@
+<head>
 
+    
+</head>
+<body>
 
-
-@{
-    ViewBag.Title = "CreditFileRecommending";
-}
-
-@*<div class="row">
+ 
 
 
-
-    <div style="margin-top:20px;">
-        <nav bar>
-            <h3 align="center">Credit File Recommending/Approving Remarks</h3>
-        </nav>
+    <div class="page-header" style="background: url(assets/img/banner1.jpg);">
         <div class="container">
-            <div class="panel panel-body">
+            <div class="row">
                 <div class="col-md-12">
-                    <div class="form-horizontal">
-                        <div class="row form-group">
-                            <label class="col-md-3">Name:</label>
-                            <div class="col-md-3">
-                                <input type="text" placeholder="Name" />
-                            </div>
-                            <label class="col-md-3">Date:</label>
-                            <div class="col-md-3">
-                                <input type="date" placeholder="Date" />
-                            </div>
-                        </div>
-                        <div class="row form-group">
-                            <label class="col-md-3">Designation:</label>
-                            <div class="col-md-3">
-                                <input type="text" placeholder="Designation" />
-                            </div>
-                            <label class="col-md-3">Employee ID:</label>
-                            <div class="col-md-3">
-                                <input type="text" placeholder="Employee ID" />
-                            </div>
-                        </div>
-                        <div class="row form-group">
-                            <label class="col-md-3">Loan Id:</label>
-                            <div class="col-md-3">
-                                <input type="text" placeholder="Loan Id" />
-                            </div>
-                            <label class="col-md-3">Department Branch:</label>
-                            <div class="col-md-3">
-                                <input type="text" placeholder="Department Branch" />
-                            </div>
-                        </div>
-                        <div class="row form-group">
-                            <label class="col-md-3">Customer Name:</label>
-                            <div class="col-md-3">
-                                <input type="text" placeholder="Customer Name" />
-                            </div>
-                        </div>
-                        <div class="row form-group">
-                            <label class="col-md-3">Customer ID:</label>
-                            <div class="col-md-3">
-                                <input type="text" placeholder="Customer ID" />
-                            </div>
-                        </div>
-                        <div class="row form-group">
-                            <label class="col-md-3">Business Unit:</label>
-                            <div class="col-md-3">
-                                <input type="text" placeholder="Business Unit" />
-                            </div>
-                        </div>
-
-                        <div class="row form-group">
-                            <label class="col-md-3">Comments:</label>
-                            <div class="col-md-3">
-                                <input type="text" placeholder="Comments" />
-                            </div>
-                        </div>
-
-                        <table class="table dataTable table-striped table-hover table-bordered">
-                            <tr>
-                                <th><u>From</u></th>
-                                <th><u>To</u></th>
-                                <th><u>Recommender</u></th>
-                                <th><u>Comment</u></th>
-                                <th><u>Action</u></th>
-                                <th><u>Signature</u></th>
-                            </tr>
-                            <tr>
-                                <td class="date"></td>
-                                <td class="date"></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </table>
+                    <div class="breadcrumb-wrapper">
+                        <h2 class="product-title">About Us</h2>
+                        <ol class="breadcrumb">
+                            <li><a href="#">Home /</a></li>
+                            <li class="current">About Us</li>
+                        </ol>
                     </div>
                 </div>
             </div>
         </div>
-
-
     </div>
-</div>*@
 
 
-
-@*@model DMS.ViewModels.Loan_Request_VM
-
-
-
-@{
-    ViewBag.Title = "CreditFileRecommending";
-}
-
-<div class="row">
-
-
-
-    <div style="margin-top:20px;">
-        <nav bar>
-            <h3 align="center">Credit File Recommending/Approving Remarks</h3>
-        </nav>
+    <section id="about" class="section-padding">
         <div class="container">
-            <div class="panel panel-body">
-                <div class="col-md-12">
-                    <div class="form-horizontal">
-                        <div class="row form-group">
-                            <label class="col-md-3">Name:</label>
-                            <div class="col-md-3">
-                                @Model.Initiator_Emp_VM.Name
-                            </div>
-                            <label class="col-md-3">Date:</label>
-                            <div class="col-md-3">
-                                @Model.Loan_Request_Status_VM_List.FirstOrDefault().Date_Eng
-                            </div>
-                        </div>
-                        <div class="row form-group">
-                            <label class="col-md-3">Designation:</label>
-                            <div class="col-md-3">
-                                @Model.Initiator_Emp_VM.Designation_VM.Title
-                            </div>
-                            <label class="col-md-3">Employee ID:</label>
-                            <div class="col-md-3">
-                                @Model.Initiator_Emp_VM.Id
-                            </div>
-                        </div>
-                        <div class="row form-group">
-                            <label class="col-md-3">Loan Id:</label>
-                            <div class="col-md-3">
-                                @Model.File_Code
-                            </div>
-                            <label class="col-md-3">Department Branch:</label>
-                            <div class="col-md-3">
-                                @Model.Branch_VM.BranchName
-                            </div>
-                        </div>
-                        <div class="row form-group">
-                            <label class="col-md-3">Customer Name:</label>
-                            <div class="col-md-3">
-                                @Model.Customer_Name
-                            </div>
-                        </div>
-                        <div class="row form-group">
-                            <label class="col-md-3">Customer ID:</label>
-                            <div class="col-md-3">
-                                <input type="text" placeholder="Customer ID" />
-                            </div>
-                        </div>
-                        <div class="row form-group">
-                            <label class="col-md-3">Business Unit:</label>
-                            <div class="col-md-3">
-                                @Model.Business_Unit_VM.Title
-                            </div>
-                        </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-6 col-xs-12">
+                    <div class="about-wrapper">
+                        <h2 class="intro-title">Why We Are Unique</h2>
+                        <p class="intro-desc">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit nostrum, doloremque quaerat sit tempora eius est reiciendis accusamus magnam quae. Explicabo dolore officia, iure a ullam aliquam nemo excepturi, repellat. uod ut delectus ad tempora.
+                        </p>
+                        <a href="#" class="btn btn-common btn-lg">Add Listing</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xs-12">
+                    <img class="img-fluid" src="~/Content/OnProject/assets/img/about/about.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
 
-                        <div class="row form-group">
-                            <label class="col-md-3">Comments:</label>
-                            <div class="col-md-3">
-                                @Model.Loan_Request_Status_VM_List.FirstOrDefault().Comments
-                            </div>
-                        </div>
 
-                        <table class="table dataTable table-striped table-hover table-bordered">
-                            <tr>
-                                <th><u>From</u></th>
-                                <th><u>To</u></th>
-                                <th><u>Recommender</u></th>
-                                <th><u>Comment</u></th>
-                                <th><u>Action</u></th>
-                                <th><u>Signature</u></th>
-                            </tr>
+    <section class="counter-section section-padding">
+        <div class="container">
+            <div class="row">
 
-                            @for (int i = 0; i < Model.Loan_Request_Status_VM_List.Count() - 1; i++)
-                            {
-                                <tr>
-                                    <td class="date">@Model.Loan_Request_Status_VM_List[i].Date_Eng</td>
-                                    <td class="date">@Model.Loan_Request_Status_VM_List[i + 1].Date_Eng</td>
-                                    <td>@Model.Loan_Request_Status_VM_List[i + 1].From_Employee_VM.Name</td>
-                                    <td>@Model.Loan_Request_Status_VM_List[i + 1].Comments</td>
-                                    <td>@Model.Loan_Request_Status_VM_List[i + 1].Status</td>
-                                    <td></td>
-                                </tr>
-                            }
-                        </table>
+                <div class="col-md-3 col-sm-6 work-counter-widget">
+                    <div class="counter">
+                        <div class="icon"><i class="lni-layers"></i></div>
+                        <h2 class="counterUp">8325</h2>
+                        <p>Ad Posted</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 work-counter-widget">
+                    <div class="counter">
+                        <div class="icon"><i class="lni-users"></i></div>
+                        <h2 class="counterUp">5487</h2>
+                        <p>Members</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 work-counter-widget">
+                    <div class="counter">
+                        <div class="icon"><i class="lni-briefcase"></i></div>
+                        <h2 class="counterUp">2012</h2>
+                        <p>Premium Ads</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 work-counter-widget">
+                    <div class="counter">
+                        <div class="icon"><i class="lni-map"></i></div>
+                        <h2 class="counterUp">200</h2>
+                        <p>Locations</p>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
 
-    </div>
-</div>*@
+    <section class="services section-padding">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 col-lg-4 col-xs-12">
+                    <div class="services-item wow fadeInRight" data-wow-delay="0.2s">
+                        <div class="icon">
+                            <i class="lni-book"></i>
+                        </div>
+                        <div class="services-content">
+                            <h3><a href="#">Full Documented</a></h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo aut magni perferendis repellat rerum assumenda facere.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 col-xs-12">
+                    <div class="services-item wow fadeInRight" data-wow-delay="0.4s">
+                        <div class="icon">
+                            <i class="lni-leaf"></i>
+                        </div>
+                        <div class="services-content">
+                            <h3><a href="#">Clean & Modern Design</a></h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo aut magni perferendis repellat rerum assumenda facere.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 col-xs-12">
+                    <div class="services-item wow fadeInRight" data-wow-delay="0.6s">
+                        <div class="icon">
+                            <i class="lni-map"></i>
+                        </div>
+                        <div class="services-content">
+                            <h3><a href="#">Great Features</a></h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo aut magni perferendis repellat rerum assumenda facere.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 col-xs-12">
+                    <div class="services-item wow fadeInRight" data-wow-delay="0.8s">
+                        <div class="icon">
+                            <i class="lni-cog"></i>
+                        </div>
+                        <div class="services-content">
+                            <h3><a href="#">Completely Customizable</a></h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo aut magni perferendis repellat rerum assumenda facere.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 col-xs-12">
+                    <div class="services-item wow fadeInRight" data-wow-delay="1s">
+                        <div class="icon">
+                            <i class="lni-git"></i>
+                        </div>
+                        <div class="services-content">
+                            <h3><a href="#">User Friendly</a></h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo aut magni perferendis repellat rerum assumenda facere.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 col-xs-12">
+                    <div class="services-item wow fadeInRight" data-wow-delay="1.2s">
+                        <div class="icon">
+                            <i class="lni-layout"></i>
+                        </div>
+                        <div class="services-content">
+                            <h3><a href="#">Awesome Layout</a></h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo aut magni perferendis repellat rerum assumenda facere.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="testimonial section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div id="testimonials" class="owl-carousel">
+                        <div class="item">
+                            <div class="img-thumb">
+                                <img src="~/Content/OnProject/assets/img/testimonial/img1.png" alt="">
+                            </div>
+                            <div class="testimonial-item">
+                                <div class="content">
+                                    <p class="description">Eiusmod tempor incidiunt labore velit dolore magna aliqu sed eniminim veniam quis nostrud exercition eullamco laborisaa, Eiusmod tempor incidiunt labore velit dolore magna.</p>
+                                    <div class="info-text">
+                                        <h2><a href="#">Josh Rossi</a></h2>
+                                        <h4><a href="#">CEO of Fiverr</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item">
+                                <div class="img-thumb">
+                                    <img src="~/Content/OnProject/assets/img/testimonial/img2.png" alt="">
+                                </div>
+                                <div class="testimonial-item">
+                                    <div class="content">
+                                        <p class="description">Eiusmod tempor incidiunt labore velit dolore magna aliqu sed eniminim veniam quis nostrud exercition eullamco laborisaa, Eiusmod tempor incidiunt labore velit dolore magna.</p>
+                                        <div class="info-text">
+                                            <h2><a href="#">Priyanka</a></h2>
+                                            <h4><a href="#">CEO of Dropbox</a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item">
+                                <div class="img-thumb">
+                                    <img src="~/Content/OnProject/assets/img/testimonial/img3.png" alt="">
+                                </div>
+                                <div class="testimonial-item">
+                                    <div class="content">
+                                        <p class="description">Eiusmod tempor incidiunt labore velit dolore magna aliqu sed eniminim veniam quis nostrud exercition eullamco laborisaa, Eiusmod tempor incidiunt labore velit dolore magna.</p>
+                                        <div class="info-text">
+                                            <h2><a href="#">Johnny Zeigler</a></h2>
+                                            <h4><a href="#">CEO of Fiverr</a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item">
+                                <div class="img-thumb">
+                                    <img src="~/Content/OnProject/assets/img/testimonial/img4.png" alt="">
+                                </div>
+                                <div class="testimonial-item">
+                                    <div class="content">
+                                        <p class="description">Eiusmod tempor incidiunt labore velit dolore magna aliqu sed eniminim veniam quis nostrud exercition eullamco laborisaa, Eiusmod tempor incidiunt labore velit dolore magna.</p>
+                                        <div class="info-text">
+                                            <h2><a href="#">Josh Rossi</a></h2>
+                                            <h4><a href="#">CEO of Fiverr</a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item">
+                                <div class="img-thumb">
+                                    <img src="~/Content/OnProject/assets/img/testimonial/img5.png" alt="">
+                                </div>
+                                <div class="testimonial-item">
+                                    <div class="content">
+                                        <p class="description">Eiusmod tempor incidiunt labore velit dolore magna aliqu sed eniminim veniam quis nostrud exercition eullamco laborisaa, Eiusmod tempor incidiunt labore velit dolore magna.</p>
+                                        <div class="info-text">
+                                            <h2><a href="#">Priyanka</a></h2>
+                                            <h4><a href="#">CEO of Dropbox</a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 
 
+  
+</body>
+
+</html>
